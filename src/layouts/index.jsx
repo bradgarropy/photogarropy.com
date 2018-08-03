@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
 // components
-import Header from "../components/header"
+import Navigation from "../components/Navigation"
 
 // styles
 import "./index.css"
@@ -23,7 +23,7 @@ const Layout = ({children, data}) => {
                 ]}
             />
 
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Navigation/>
 
             <div
                 style={{
