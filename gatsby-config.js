@@ -2,5 +2,18 @@ module.exports = {
     siteMetadata: {
         title: "photogarropy",
     },
-    plugins: ["gatsby-plugin-react-helmet"],
+    plugins: [
+        {
+            resolve: "gatsby-plugin-react-helmet",
+        },
+        {
+            resolve: "gatsby-plugin-google-fonts",
+            options: {
+                fonts: [
+                    "josefin slab",
+                    "sacramento",
+                ],
+            },
+        },
+    ],
 }
