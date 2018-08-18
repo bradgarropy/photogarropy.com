@@ -1,0 +1,15 @@
+.social {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 0.75rem;
+
+    a {
+        color: rgba($color: black, $alpha: 1.0);
+        transition-property: color;
+        transition-duration: 0.2s;
+
+        &:hover {
+            color: rgba($color: black, $alpha: 0.5)
+        }
+    }
+}

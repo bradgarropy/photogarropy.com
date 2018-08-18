@@ -6,9 +6,6 @@ import Helmet from "react-helmet"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 
-// styles
-import "./index.css"
-
 
 const IndexLayout = ({children}) => {
 

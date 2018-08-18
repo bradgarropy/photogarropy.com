@@ -1,0 +1,15 @@
+.powered-by {
+    font-family: "Josefin Slab", serif;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 0.25rem;
+
+    p {
+        margin: 0rem;
+        padding-top: 0.1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

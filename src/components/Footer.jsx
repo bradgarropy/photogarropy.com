@@ -4,11 +4,15 @@ import React from "react"
 import Social from "./Social"
 import PoweredBy from "./PoweredBy"
 
+// styles
+import "../scss/Footer.scss"
+
 
 const Footer = () => (
 
     <div className="footer">
 
+        <span/>
         <Social/>
         <PoweredBy/>
 

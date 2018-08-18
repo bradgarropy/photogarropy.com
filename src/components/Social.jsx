@@ -1,6 +1,9 @@
 import React from "react"
 import Helmet from "react-helmet"
 
+// styles
+import "../scss/Social.scss"
+
 
 const Social = () => (
 
@@ -11,11 +14,11 @@ const Social = () => (
         </Helmet>
 
         <a href="https://facebook.com/photogarropy">
-            <i className="fab fa-facebook-square"></i>
+            <i className="fab fa-2x fa-facebook-square"></i>
         </a>
 
         <a href="https://www.instagram.com/photogarropy">
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-2x fa-instagram"></i>
         </a>
 
     </div>
