@@ -15,5 +15,8 @@ module.exports = {
                 ],
             },
         },
+        {
+            resolve: "gatsby-plugin-sass",
+        },
     ],
 }

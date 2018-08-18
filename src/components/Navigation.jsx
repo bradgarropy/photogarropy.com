@@ -2,7 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 
 // styles
-import "./Navigation.css"
+import "../scss/Navigation.scss"
 
 
 const Navigation = () => {
@@ -12,7 +12,7 @@ const Navigation = () => {
         <div className="navigation">
 
             <div className="navigation-left">
-                <a href="/">photogarropy</a>
+                <Link to="/">photogarropy</Link>
             </div>
 
             <div className="navigation-right">
