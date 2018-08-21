@@ -6,7 +6,7 @@ const Pricing = (props) => {
 
     return (
 
-        <h1>Pricing</h1>
+        <p>Pricing</p>
 
     )
 

@@ -6,12 +6,16 @@ import Helmet from "react-helmet"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 
+// styles
+import "../scss/reset.scss"
+import "../scss/Index.scss"
+
 
 const IndexLayout = ({children}) => {
 
     return (
 
-        <div>
+        <div className="index">
 
             <Helmet>
                 <title>photogarropy</title>
@@ -24,9 +28,12 @@ const IndexLayout = ({children}) => {
                 <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16" />
             </Helmet>
 
+
             <Navigation/>
 
-            {children()}
+            <div className="content">
+                {children()}
+            </div>
 
             <Footer/>
 

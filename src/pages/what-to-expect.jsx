@@ -6,7 +6,7 @@ const WhatToExpect = (props) => {
 
     return (
 
-        <h1>What To Expect</h1>
+        <p>What To Expect</p>
 
     )
 

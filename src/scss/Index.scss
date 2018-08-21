@@ -1,0 +1,14 @@
+@import "colors";
+
+.index {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.content {
+    background-color: $pink;
+    font-family: "Josefin Slab", serif;
+    display: grid;
+    align-content: center;
+}
