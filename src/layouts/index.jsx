@@ -32,7 +32,9 @@ const IndexLayout = ({children}) => {
             <Navigation/>
 
             <div className="content">
-                {children()}
+                <div className="container">
+                    {children()}
+                </div>
             </div>
 
             <Footer/>

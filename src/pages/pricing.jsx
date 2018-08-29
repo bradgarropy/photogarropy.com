@@ -1,24 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 
-const Pricing = (props) => {
+const Pricing = () => {
 
     return (
 
-        <p>Pricing</p>
+        <p>pricing</p>
 
     )
-
-}
-
-
-Pricing.propTypes = {
-
-}
-
-
-Pricing.defaultProps = {
 
 }
 

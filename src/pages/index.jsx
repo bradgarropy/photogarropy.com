@@ -2,7 +2,7 @@ import React from "react"
 
 const IndexPage = () => (
     <div>
-        <h1>home</h1>
+        <p>home</p>
     </div>
 )
 

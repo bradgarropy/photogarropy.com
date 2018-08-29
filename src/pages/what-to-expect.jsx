@@ -1,24 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 
-const WhatToExpect = (props) => {
+const WhatToExpect = () => {
 
     return (
 
-        <p>What To Expect</p>
+        <p>what to expect</p>
 
     )
-
-}
-
-
-WhatToExpect.propTypes = {
-
-}
-
-
-WhatToExpect.defaultProps = {
 
 }
 
