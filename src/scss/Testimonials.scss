@@ -1,0 +1,28 @@
+@import "colors";
+
+.testimonials {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+
+    .testimonial {
+
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        row-gap: 1.25rem;
+
+        p {
+            margin: 0rem;
+        }
+
+        img {
+            width: 100%;
+            box-shadow: 5px 5px 20px 1px $grey;
+        }
+
+    }
+
+}
