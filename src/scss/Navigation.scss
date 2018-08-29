@@ -1,3 +1,5 @@
+@import "colors";
+
 .navigation {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -8,6 +10,7 @@
 }
 
 .navigation-left {
+
     font-family: "Sacramento", cursive;
 
     a {
@@ -15,9 +18,11 @@
         color: black;
         text-decoration: none;
     }
+
 }
 
 .navigation-right {
+
     display: grid;
     grid-template-columns: repeat(5, auto);
     column-gap: 1.25rem;
@@ -27,5 +32,11 @@
     a {
         color: black;
         text-decoration: none;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid $black;
+        }
     }
+
 }
