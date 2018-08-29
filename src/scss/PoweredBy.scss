@@ -1,6 +1,7 @@
 .powered-by {
     font-family: "Josefin Slab", serif;
     display: grid;
+    justify-self: right;
     grid-template-columns: repeat(2, auto);
     column-gap: 0.25rem;
 
