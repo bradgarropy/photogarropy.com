@@ -18,8 +18,7 @@ const Contact = () => {
                     id="contact-form"
                     className="contact-form"
                     name="contact"
-                    method="POST"
-                    netlify
+                    data-netlify="true"
                 >
 
                     <div className="contact-form-field">
