@@ -43,7 +43,7 @@ const Contact = () => {
 
             </div>
 
-            <img src="images/img_8859.jpg"/>
+            <img src="/images/img_8859.jpg"/>
 
         </div>
 
