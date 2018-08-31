@@ -14,7 +14,12 @@ const Contact = () => {
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
 
-                <form id="contact-form" className="contact-form">
+                <form
+                    id="contact-form"
+                    className="contact-form"
+                    name="contact"
+                    netlify
+                >
 
                     <div className="contact-form-field">
                         <label>Name</label>
