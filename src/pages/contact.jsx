@@ -18,6 +18,7 @@ const Contact = () => {
                     id="contact-form"
                     className="contact-form"
                     name="contact"
+                    method="post"
                     data-netlify="true"
                 >
 
