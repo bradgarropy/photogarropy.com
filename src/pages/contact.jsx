@@ -7,53 +7,63 @@ import Honeypot from "../components/Honeypot"
 import "../scss/Contact.scss"
 
 
-const Contact = () => {
+class Contact extends React.Component {
 
-    return (
+    onSubmit(event) {
+        event.preventDefault()
+        console.log("submitted!")
+    }
 
-        <div className="container contact">
+    render() {
 
-            <div>
+        return (
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+            <div className="container contact">
 
-                <form
-                    id="contact-form"
-                    className="contact-form"
-                    name="contact"
-                    method="post"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                >
+                <div>
 
-                    <Honeypot/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
 
-                    <div className="contact-form-field">
-                        <label>Name</label>
-                        <input type="text" name="name"/>
-                    </div>
+                    <form
+                        id="contact-form"
+                        className="contact-form"
+                        name="contact"
+                        method="post"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        onSubmit={this.onSubmit}
+                    >
 
-                    <div className="contact-form-field">
-                        <label>Email</label>
-                        <input type="email" name="email"/>
-                    </div>
+                        <Honeypot/>
 
-                    <div className="contact-form-field">
-                        <label>Message</label>
-                        <textarea rows="4" name="message"></textarea>
-                    </div>
+                        <div className="contact-form-field">
+                            <label>Name</label>
+                            <input type="text" name="name"/>
+                        </div>
 
-                    <button type="submit">Submit</button>
+                        <div className="contact-form-field">
+                            <label>Email</label>
+                            <input type="email" name="email"/>
+                        </div>
 
-                </form>
+                        <div className="contact-form-field">
+                            <label>Message</label>
+                            <textarea rows="4" name="message"></textarea>
+                        </div>
+
+                        <button type="submit">Submit</button>
+
+                    </form>
+
+                </div>
+
+                <img src="/images/img_8859.jpg"/>
 
             </div>
 
-            <img src="/images/img_8859.jpg"/>
+        )
 
-        </div>
-
-    )
+    }
 
 }
 
