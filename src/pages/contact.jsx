@@ -1,5 +1,8 @@
 import React from "react"
 
+// components
+import Honeypot from "../components/Honeypot"
+
 // styles
 import "../scss/Contact.scss"
 
@@ -20,7 +23,10 @@ const Contact = () => {
                     name="contact"
                     method="post"
                     data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                 >
+
+                    <Honeypot/>
 
                     <div className="contact-form-field">
                         <label>Name</label>
