@@ -5,7 +5,9 @@ const WhatToExpect = () => {
 
     return (
 
-        <p>what to expect</p>
+        <div className="container what-to-expect">
+            <p>what to expect</p>
+        </div>
 
     )
 

@@ -8,7 +8,7 @@ const Testimonials = () => {
 
     return (
 
-        <div className="testimonials">
+        <div className="container testimonials">
 
             <div className="testimonial">
                 <img src="images/img_8856.jpg"/>
