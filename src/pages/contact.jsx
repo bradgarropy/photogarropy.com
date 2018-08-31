@@ -24,7 +24,6 @@ const Contact = () => {
                     method="post"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
-                    onSubmit={this.onSubmit}
                 >
 
                     <Honeypot/>
