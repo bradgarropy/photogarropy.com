@@ -20,6 +20,7 @@ const Contact = () => {
                 <NetlifyForm
                     name="contact"
                     className="contact-form"
+                    // action="/thanks/"
                 >
 
                     <div className="contact-form-field">
