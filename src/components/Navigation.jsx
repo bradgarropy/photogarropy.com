@@ -16,11 +16,11 @@ const Navigation = () => {
             </div>
 
             <div className="navigation-right">
-                <Link to="/about/">About</Link>
-                <Link to="/pricing/">Pricing</Link>
-                <Link to="/testimonials/">Testimonials</Link>
-                <Link to="/what-to-expect/">What To Expect</Link>
-                <Link to="/contact/">Contact</Link>
+                <Link to="/about">About</Link>
+                <Link to="/pricing">Pricing</Link>
+                <Link to="/testimonials">Testimonials</Link>
+                <Link to="/what-to-expect">What To Expect</Link>
+                <Link to="/contact">Contact</Link>
             </div>
 
         </div>
