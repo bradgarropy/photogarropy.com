@@ -1,5 +1,8 @@
 import React from "react"
 
+// components
+import NetlifyForm from "../components/NetlifyForm"
+
 // styles
 import "../scss/Contact.scss"
 
@@ -14,17 +17,10 @@ const Contact = () => {
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
 
-                <form
-                    id="contact-form"
-                    className="contact-form"
+                <NetlifyForm
                     name="contact"
-                    method="post"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    className="contact-form"
                 >
-
-                    <input type="hidden" name="bot-field"/>
-                    <input type="hidden" name="form-name" value="contact"/>
 
                     <div className="contact-form-field">
                         <label>Name</label>
@@ -43,7 +39,7 @@ const Contact = () => {
 
                     <button type="submit">Submit</button>
 
-                </form>
+                </NetlifyForm>
 
             </div>
 
