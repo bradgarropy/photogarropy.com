@@ -19,8 +19,8 @@ const IndexLayout = ({children}) => {
 
             <Helmet>
                 <title>photogarropy</title>
-                <meta name="description" content="Sample"/>
-                <meta name="keywords" content="sample, something"/>
+                <meta name="description" content="📷 wife's photography business"/>
+                <meta name="keywords" content="gatsby, react, markdown, scss, eslint, photography"/>
                 <link rel="icon" type="image/png" href="/icons/favicon-196x196.png" sizes="196x196" />
                 <link rel="icon" type="image/png" href="/icons/favicon-128x128.png" sizes="128x128" />
                 <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
