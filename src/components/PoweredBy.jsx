@@ -4,14 +4,14 @@ import React from "react"
 import Logo from "./Logo"
 
 // styles
-import "../scss/PoweredBy.scss"
+import "../scss/BuiltBy.scss"
 
 
-const PoweredBy = () => (
+const BuiltBy = () => (
 
-    <div className="powered-by">
+    <div className="built-by">
 
-        <p>powered by</p>
+        <p>built by</p>
 
         <a href="https://bradgarropy.com">
             <Logo/>
@@ -23,4 +23,4 @@ const PoweredBy = () => (
 
 
 // export
-export default PoweredBy
+export default BuiltBy
