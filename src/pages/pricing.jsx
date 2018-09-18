@@ -1,17 +1,27 @@
 import React from "react"
+import {graphql} from "gatsby"
+import PropTypes from "prop-types"
 
 // components
 import Layout from "../components/Layout"
 
 
-const Pricing = () => {
+const Pricing = ({data}) => {
+
+    const content = data.file.childMarkdownRemark.html
 
     return (
 
         <Layout>
 
             <div className="container pricing">
-                <p>pricing</p>
+
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: content,
+                    }}
+                />
+
             </div>
 
         </Layout>
@@ -19,6 +29,22 @@ const Pricing = () => {
     )
 
 }
+
+
+Pricing.propTypes = {
+    data: PropTypes.object.isRequired,
+}
+
+
+export const query = graphql`
+    {
+        file (name: {eq: "pricing"}) {
+            childMarkdownRemark {
+                html
+            }
+        }
+    }
+`
 
 
 // export
