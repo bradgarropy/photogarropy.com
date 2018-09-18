@@ -1,13 +1,20 @@
 import React from "react"
 
+// components
+import Layout from "../components/Layout"
+
 
 const WhatToExpect = () => {
 
     return (
 
-        <div className="container what-to-expect">
-            <p>what to expect</p>
-        </div>
+        <Layout>
+
+            <div className="container what-to-expect">
+                <p>what to expect</p>
+            </div>
+
+        </Layout>
 
     )
 

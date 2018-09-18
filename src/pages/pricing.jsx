@@ -1,13 +1,20 @@
 import React from "react"
 
+// components
+import Layout from "../components/Layout"
+
 
 const Pricing = () => {
 
     return (
 
-        <div className="container pricing">
-            <p>pricing</p>
-        </div>
+        <Layout>
+
+            <div className="container pricing">
+                <p>pricing</p>
+            </div>
+
+        </Layout>
 
     )
 

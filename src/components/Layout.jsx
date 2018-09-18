@@ -3,19 +3,19 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
 // components
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import Navigation from "./Navigation"
+import Footer from "./Footer"
 
 // styles
 import "../scss/reset.scss"
-import "../scss/Index.scss"
+import "../scss/Layout.scss"
 
 
-const IndexLayout = ({children}) => {
+const Layout = ({children}) => {
 
     return (
 
-        <div className="index">
+        <div className="layout">
 
             <Helmet>
                 <title>photogarropy</title>
@@ -32,7 +32,7 @@ const IndexLayout = ({children}) => {
             <Navigation/>
 
             <div className="content">
-                {children()}
+                {children}
             </div>
 
             <Footer/>
@@ -44,10 +44,10 @@ const IndexLayout = ({children}) => {
 }
 
 
-IndexLayout.propTypes = {
+Layout.propTypes = {
     children: PropTypes.func,
 }
 
 
 // export
-export default IndexLayout
+export default Layout
