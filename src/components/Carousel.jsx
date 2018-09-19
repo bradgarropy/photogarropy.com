@@ -15,6 +15,7 @@ class Carousel extends React.Component {
             index: 0,
         }
 
+        this.carousel = React.createRef()
         this.changeImage = this.changeImage.bind(this)
 
     }
@@ -40,7 +41,7 @@ class Carousel extends React.Component {
     }
 
     changeImage() {
-        const carousel = document.getElementById("carousel")
+        const carousel = this.carousel.current
         const index = (this.state.index === this.props.images.length - 1) ? 0 : this.state.index + 1
         const image = this.props.images[index]
 
@@ -55,7 +56,7 @@ class Carousel extends React.Component {
 
         return (
             <div
-                id="carousel"
+                ref={this.carousel}
                 className="carousel"
                 style={{backgroundImage: `url(${image})`}}
             />
