@@ -18,7 +18,8 @@ const Contact = () => {
 
                 <div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+                    <p>Let's get in touch!</p>
+                    <p>I would love to book an appointment or answer any questions!</p>
 
                     <NetlifyForm
                         name="contact"

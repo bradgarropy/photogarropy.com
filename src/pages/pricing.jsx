@@ -5,6 +5,9 @@ import PropTypes from "prop-types"
 // components
 import Layout from "../components/Layout"
 
+// styles
+import "../scss/Pricing.scss"
+
 
 const Pricing = ({data}) => {
 
