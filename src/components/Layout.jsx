@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
 // components
-import Navigation from "./Navigation"
+import Header from "./Header"
 import Footer from "./Footer"
 
 // styles
@@ -29,7 +29,7 @@ const Layout = ({children}) => {
             </Helmet>
 
 
-            <Navigation/>
+            <Header/>
 
             <div className="content">
                 {children}

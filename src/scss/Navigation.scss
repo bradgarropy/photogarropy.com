@@ -1,46 +1,16 @@
 @import "colors";
 
 .navigation {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    align-items: center;
-    justify-content: space-between;
-    margin: 0rem 3rem;
-    padding: 0.3rem 0rem;
-}
 
-.navigation-left {
-
-    font-family: "Sacramento", cursive;
-
-    a {
-        font-size: 3rem;
-        color: black;
-        text-decoration: none;
-    }
-
-}
-
-.navigation-right {
-
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 1.25rem;
     font-family: "Josefin Slab", serif;
     font-weight: 700;
 
-    a {
-        color: black;
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
+    .fas {
+        cursor: pointer;
 
-        &:hover {
-            border-bottom: 1px solid $black;
+        @media (min-width: 800px) {
+            display: none;
         }
-    }
-
-    @media (max-width: 800px) {
-        display: none;
     }
 
 }
