@@ -25,4 +25,10 @@
 
     }
 
+    @media (max-width: 1200px) {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: none;
+        row-gap: 2.5rem;
+    }
+
 }
