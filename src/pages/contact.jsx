@@ -47,7 +47,7 @@ const Contact = () => {
 
                 </div>
 
-                <img src="/images/img_8859.jpg"/>
+                <img src="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8859.jpg"/>
 
             </div>
 
