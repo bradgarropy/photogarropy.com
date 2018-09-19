@@ -12,7 +12,6 @@ class Carousel extends React.Component {
         super(props)
 
         this.state = {
-            id: null,
             index: 0,
         }
 
@@ -21,12 +20,23 @@ class Carousel extends React.Component {
     }
 
     componentDidMount() {
-        const id = setInterval(this.changeImage, 5000)
-        this.setState({id})
+        this.id = setInterval(this.changeImage, 5000)
+        this.preloadImages()
     }
 
     componentWillUnmount() {
-        clearInterval(this.state.id)
+        clearInterval(this.id)
+    }
+
+    preloadImages() {
+
+        this.props.images.forEach(
+            image => {
+                let img = document.createElement("img")
+                img.src = image
+            }
+        )
+
     }
 
     changeImage() {
