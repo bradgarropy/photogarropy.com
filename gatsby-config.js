@@ -37,5 +37,8 @@ module.exports = {
         {
             resolve: "gatsby-transformer-remark",
         },
+        {
+            resolve: "gatsby-transformer-json",
+        },
     ],
 }
