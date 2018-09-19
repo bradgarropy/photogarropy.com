@@ -21,7 +21,7 @@ class Carousel extends React.Component {
 
     componentDidMount() {
         this.id = setInterval(this.changeImage, 5000)
-        // this.preloadImages()
+        this.preloadImages()
     }
 
     componentWillUnmount() {
