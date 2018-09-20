@@ -1,0 +1,12 @@
+.hamburger {
+
+    z-index: 1;
+
+    .fas {
+        cursor: pointer;
+    }
+
+    @media (min-width: 800px) {
+        display: none;
+    }
+}

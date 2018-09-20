@@ -10,25 +10,39 @@
     right: 0;
     margin: 1rem;
     padding: 3rem;
+
+    box-shadow: 5px 5px 20px 1px $grey;
+
+    .fas {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    @media (min-width: 800px) {
+        display: none;
+    }
+
+}
+
+
+.mobile-navigation-links {
+
     display: grid;
     justify-items: center;
     grid-template-rows: repeat(4, auto);
     row-gap: 1.25rem;
-    box-shadow: 5px 5px 20px 1px $grey;
 
     a {
         color: black;
         text-decoration: none;
         border-bottom: 1px solid transparent;
         font-size: 1rem;
+        margin: 0.75rem 0rem;
 
         &:hover {
             border-bottom: 1px solid $black;
         }
-    }
-
-    @media (min-width: 800px) {
-        display: none;
     }
 
 }
