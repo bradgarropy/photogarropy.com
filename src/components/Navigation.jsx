@@ -2,7 +2,6 @@ import React from "react"
 
 // components
 import DesktopNavigation from "./DesktopNavigation"
-import Hamburger from "./Hamburger"
 import MobileNavigation from "./MobileNavigation"
 
 // styles
@@ -24,10 +23,7 @@ class Navigation extends React.Component {
             <nav className="navigation">
 
                 <DesktopNavigation/>
-
-                <Hamburger>
-                    <MobileNavigation/>
-                </Hamburger>
+                <MobileNavigation/>
 
             </nav>
 

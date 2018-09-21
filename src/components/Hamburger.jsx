@@ -39,7 +39,10 @@ class Hamburger extends React.Component {
                     onClick={this.onClick}
                 />
 
-                {this.state.open && this.props.children}
+                {
+                    this.state.open &&
+                    this.props.children({onClick: this.onClick})
+                }
 
             </div>
 
@@ -52,7 +55,7 @@ class Hamburger extends React.Component {
 
 
 Hamburger.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.func,
 }
 
 
