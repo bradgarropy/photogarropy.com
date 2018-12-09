@@ -1,11 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-
 const NetlifyForm = ({name, className, action, children}) => {
-
     return (
-
         <form
             name={name}
             className={className}
@@ -14,18 +11,13 @@ const NetlifyForm = ({name, className, action, children}) => {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
         >
-
             <input type="hidden" name="bot-field"/>
             <input type="hidden" name="form-name" value="contact"/>
 
             {children}
-
         </form>
-
     )
-
 }
-
 
 NetlifyForm.propTypes = {
     name: PropTypes.string.isRequired,
@@ -34,12 +26,10 @@ NetlifyForm.propTypes = {
     children: PropTypes.arrayOf(PropTypes.element).isRequired,
 }
 
-
 NetlifyForm.defaultProps = {
     className: "",
     action: "",
 }
-
 
 // export
 export default NetlifyForm

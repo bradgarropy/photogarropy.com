@@ -7,11 +7,8 @@ import Carousel from "../components/Carousel"
 // styles
 import "../scss/Carousel.scss"
 
-
 const IndexPage = () => (
-
     <Layout>
-
         <Carousel
             images={[
                 "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8855.jpg",
@@ -24,11 +21,8 @@ const IndexPage = () => (
                 "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8862.jpg",
             ]}
         />
-
     </Layout>
-
 )
-
 
 // export
 export default IndexPage

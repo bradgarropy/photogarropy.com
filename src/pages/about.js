@@ -8,17 +8,12 @@ import Layout from "../components/Layout"
 // styles
 import "../scss/About.scss"
 
-
 const About = ({data}) => {
-
     const content = data.file.childMarkdownRemark.html
 
     return (
-
         <Layout>
-
             <div className="container about">
-
                 <img src="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8855.jpg"/>
 
                 <div
@@ -26,31 +21,24 @@ const About = ({data}) => {
                         __html: content,
                     }}
                 />
-
             </div>
-
         </Layout>
-
     )
-
 }
-
 
 About.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-
 export const query = graphql`
     {
-        file (name: {eq: "about"}) {
+        file(name: {eq: "about"}) {
             childMarkdownRemark {
                 html
             }
         }
     }
 `
-
 
 // export
 export default About

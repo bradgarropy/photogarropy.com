@@ -4,53 +4,44 @@ import PropTypes from "prop-types"
 // styles
 import "../scss/Carousel.scss"
 
-
 class Carousel extends React.Component {
-
-    constructor(props) {
-
-        super(props)
-
-        this.state = {
-            index: 0,
-        }
-
-        this.carousel = React.createRef()
-        this.changeImage = this.changeImage.bind(this)
-
+    static propTypes = {
+        images: PropTypes.arrayOf(PropTypes.string).isRequired,
     }
 
-    componentDidMount() {
+    state = {index: 0}
+
+    carousel = React.createRef()
+
+    componentDidMount = () => {
         this.id = setInterval(this.changeImage, 5000)
         this.preloadImages()
     }
 
-    componentWillUnmount() {
+    componentWillUnmount = () => {
         clearInterval(this.id)
     }
 
-    preloadImages() {
-
-        this.props.images.forEach(
-            image => {
-                let img = document.createElement("img")
-                img.src = image
-            }
-        )
-
+    preloadImages = () => {
+        this.props.images.forEach(image => {
+            let img = document.createElement("img")
+            img.src = image
+        })
     }
 
-    changeImage() {
+    changeImage = () => {
         const carousel = this.carousel.current
-        const index = (this.state.index === this.props.images.length - 1) ? 0 : this.state.index + 1
+        const index =
+            this.state.index === this.props.images.length - 1
+                ? 0
+                : this.state.index + 1
         const image = this.props.images[index]
 
         carousel.style.backgroundImage = `url(${image})`
         this.setState({index})
     }
 
-    render() {
-
+    render = () => {
         const index = this.state.index
         const image = this.props.images[index]
 
@@ -61,16 +52,8 @@ class Carousel extends React.Component {
                 style={{backgroundImage: `url(${image})`}}
             />
         )
-
     }
-
 }
-
-
-Carousel.propTypes = {
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
-}
-
 
 // export
 export default Carousel

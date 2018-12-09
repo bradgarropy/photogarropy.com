@@ -8,19 +8,16 @@ import Hamburger from "../components/Hamburger"
 // styles
 import "../scss/MobileNavigation.scss"
 
-
 const MobileNavigation = () => {
-
     return (
-
         <Hamburger>
-
             {({onClick}) => (
-
                 <div className="mobile-navigation">
-
                     <Helmet>
-                        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
+                        <link
+                            rel="stylesheet"
+                            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+                        />
                     </Helmet>
 
                     <i className="fas fa-lg fa-times" onClick={onClick}/>
@@ -31,17 +28,11 @@ const MobileNavigation = () => {
                         <Link to="/testimonials/">Testimonials</Link>
                         <Link to="/contact/">Contact</Link>
                     </div>
-
                 </div>
-
             )}
-
         </Hamburger>
-
     )
-
 }
-
 
 // export
 export default MobileNavigation
