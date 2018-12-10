@@ -33,14 +33,14 @@ module.exports = {
         {
             resolve: "gatsby-plugin-google-fonts",
             options: {
-                fonts: [
-                    "josefin slab",
-                    "sacramento",
-                ],
+                fonts: ["josefin slab", "sacramento"],
             },
         },
         {
             resolve: "gatsby-plugin-sass",
+        },
+        {
+            resolve: "gatsby-plugin-netlify-cms",
         },
         {
             resolve: "gatsby-source-filesystem",

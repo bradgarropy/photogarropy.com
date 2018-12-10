@@ -1,0 +1,34 @@
+backend:
+    name: git-gateway
+    branch: netlifycms
+collections:
+    - name: "about"
+      label: "About"
+      folder: "src/content/about"
+      create: true
+      fields:
+          - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Photo", name: "photo", widget: "file"}
+    - name: "carousel"
+      label: "Carousel"
+      folder: "src/content/carousel"
+      create: true
+      fields:
+          - {label: "Photos", name: "photos", widget: "file"}
+    - name: "pricing"
+      label: "Pricing"
+      folder: "src/content/pricing"
+      create: true
+      fields:
+          - {label: "Description", name: "description", widget: "markdown"}
+    - name: "testimonial"
+      label: "Testimonial"
+      folder: "src/content/testimonial"
+      create: true
+      fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Quote", name: "quote", widget: "text"}
+          - {label: "Photo", name: "photo", widget: "file"}
+public_folder: "/images/uploads"
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
