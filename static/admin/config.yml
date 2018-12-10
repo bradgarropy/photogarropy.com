@@ -5,7 +5,7 @@ collections:
     - name: "about"
       label: "About"
       folder: "src/content/about"
-      create: true,
+      create: true
       fields:
           - {
                 label: "Title",
