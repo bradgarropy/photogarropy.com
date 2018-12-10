@@ -1,5 +1,5 @@
 ---
-title: about-me
+title: about
 bio: >-
   I was born and raised in Mexico, a beautiful country with rolling plains and
   stacked cities. Although I never picked up a camera while I lived there,
