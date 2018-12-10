@@ -5,7 +5,14 @@ collections:
     - name: "about"
       label: "About"
       folder: "src/content/about"
+      create: true,
       fields:
+          - {
+                label: "Title",
+                name: "title",
+                widget: "hidden",
+                default: "about-me",
+            }
           - {label: "Bio", name: "bio", widget: "text"}
           - {label: "Photo", name: "photo", widget: "file"}
     - name: "carousel"
