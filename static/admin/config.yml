@@ -10,7 +10,7 @@ collections:
           - {
                 label: "Title",
                 name: "title",
-                widget: "hidden",
+                widget: "string",
                 default: "about-me",
             }
           - {label: "Bio", name: "bio", widget: "text"}
