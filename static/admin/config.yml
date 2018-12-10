@@ -6,12 +6,7 @@ collections:
       label: "About"
       folder: "src/content/about"
       fields:
-          - {
-                label: "Title",
-                name: "title",
-                widget: "string",
-                default: "about-me",
-            }
+          - {label: "Title", name: "title", widget: "string", default: "about"}
           - {label: "Bio", name: "bio", widget: "text"}
           - {label: "Photo", name: "photo", widget: "file"}
     - name: "carousel"
@@ -24,6 +19,12 @@ collections:
       folder: "src/content/pricing"
       create: true
       fields:
+          - {
+                label: "Title",
+                name: "title",
+                widget: "string",
+                default: "pricing",
+            }
           - {label: "Description", name: "description", widget: "markdown"}
     - name: "testimonial"
       label: "Testimonial"
