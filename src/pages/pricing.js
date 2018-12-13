@@ -1,6 +1,7 @@
 import React from "react"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
+import Markdown from "markdown-to-jsx"
 
 // components
 import Layout from "../components/Layout"
@@ -9,16 +10,13 @@ import Layout from "../components/Layout"
 import "../scss/Pricing.scss"
 
 const Pricing = ({data}) => {
-    const content = data.file.childMarkdownRemark.html
+    const pricing = data.allContentfulPricing.edges[0].node
+    const description = pricing.description.description
 
     return (
         <Layout>
             <div className="container pricing">
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: content,
-                    }}
-                />
+                <Markdown>{description}</Markdown>
             </div>
         </Layout>
     )
@@ -30,9 +28,13 @@ Pricing.propTypes = {
 
 export const query = graphql`
     {
-        file(name: {eq: "pricing"}) {
-            childMarkdownRemark {
-                html
+        allContentfulPricing {
+            edges {
+                node {
+                    description {
+                        description
+                    }
+                }
             }
         }
     }

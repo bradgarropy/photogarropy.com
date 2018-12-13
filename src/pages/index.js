@@ -1,4 +1,6 @@
 import React from "react"
+import {graphql} from "gatsby"
+import PropTypes from "prop-types"
 
 // components
 import Layout from "../components/Layout"
@@ -7,22 +9,36 @@ import Carousel from "../components/Carousel"
 // styles
 import "../scss/Carousel.scss"
 
-const IndexPage = () => (
-    <Layout>
-        <Carousel
-            images={[
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8855.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8856.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8857.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8858.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8859.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8860.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8861.jpg",
-                "https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/photogarropy/img_8862.jpg",
-            ]}
-        />
-    </Layout>
-)
+const Index = ({data}) => {
+    const carousel = data.allContentfulCarousel.edges[0].node
+    const photos = carousel.photos.map(photo => photo.file.url)
+
+    return (
+        <Layout>
+            <Carousel images={photos}/>
+        </Layout>
+    )
+}
+
+Index.propTypes = {
+    data: PropTypes.object.isRequired,
+}
+
+export const query = graphql`
+    {
+        allContentfulCarousel {
+            edges {
+                node {
+                    photos {
+                        file {
+                            url
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
 
 // export
-export default IndexPage
+export default Index

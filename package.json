@@ -1,6 +1,6 @@
 {
     "name": "photogarropy.com",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "📷 wife's photography business",
     "keywords": [
         "gatsby",
@@ -29,6 +29,7 @@
         "build": "gatsby build"
     },
     "dependencies": {
+        "dotenv": "^6.2.0",
         "gatsby": "^2.0.64",
         "gatsby-plugin-google-analytics": "^2.0.8",
         "gatsby-plugin-google-fonts": "0.0.4",
@@ -36,9 +37,8 @@
         "gatsby-plugin-offline": "^2.0.5",
         "gatsby-plugin-react-helmet": "^3.0.4",
         "gatsby-plugin-sass": "^2.0.7",
-        "gatsby-source-filesystem": "^2.0.11",
-        "gatsby-transformer-json": "^2.1.6",
-        "gatsby-transformer-remark": "^2.1.15",
+        "gatsby-source-contentful": "^2.0.20",
+        "markdown-to-jsx": "^6.9.0",
         "node-sass": "^4.11.0",
         "react": "^16.6.3",
         "react-dom": "^16.6.3",

@@ -1,6 +1,7 @@
 import React from "react"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
+import Markdown from "markdown-to-jsx"
 
 // components
 import Layout from "../components/Layout"
@@ -9,40 +10,51 @@ import Layout from "../components/Layout"
 import "../scss/Testimonials.scss"
 
 const Testimonials = ({data}) => {
-    const testimonials = data.file.childContentJson.testimonials
+    const testimonials = data.allContentfulTestimonial.edges
 
     return (
         <Layout>
             <div className="container testimonials">
-                {testimonials.map((testimonial, index) => (
-                    <div key={index} className="testimonial">
-                        <img src={testimonial.image}/>
-                        <p>{testimonial.quote}</p>
-                    </div>
-                ))}
+                {testimonials.map(testimonial => {
+                    const id = testimonial.node.contentful_id
+                    const photo = testimonial.node.photo.file.url
+                    const quote = testimonial.node.quote.quote
+
+                    return (
+                        <div key={id} className="testimonial">
+                            <img src={photo}/>
+                            <Markdown>{quote}</Markdown>
+                        </div>
+                    )
+                })}
             </div>
         </Layout>
     )
 }
 
+Testimonials.propTypes = {
+    data: PropTypes.object.isRequired,
+}
+
 export const query = graphql`
     {
-        file(name: {eq: "testimonials"}) {
-            name
-            childContentJson {
-                testimonials {
-                    image
-                    quote
-                    client
+        allContentfulTestimonial {
+            edges {
+                node {
+                    contentful_id
+                    photo {
+                        file {
+                            url
+                        }
+                    }
+                    quote {
+                        quote
+                    }
                 }
             }
         }
     }
 `
-
-Testimonials.propTypes = {
-    data: PropTypes.object.isRequired,
-}
 
 // export
 export default Testimonials

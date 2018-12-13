@@ -12,7 +12,7 @@ const Contact = () => {
         <Layout>
             <div className="container contact">
                 <div>
-                    <p>Let's get in touch!</p>
+                    <p>Let&#39;s get in touch!</p>
                     <p>
                         I would love to book an appointment or answer any
                         questions!

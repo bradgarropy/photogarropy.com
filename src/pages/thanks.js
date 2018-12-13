@@ -8,7 +8,7 @@ const Thanks = () => {
         <Layout>
             <div className="container">
                 <h1>Thank You!</h1>
-                <p>We got your message and will respond to you soon.</p>
+                <p>I got your message and will respond to you soon.</p>
             </div>
         </Layout>
     )

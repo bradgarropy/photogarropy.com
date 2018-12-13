@@ -1,3 +1,23 @@
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
+let contentfulOptions
+
+if (process.env.CONTEXT === "production") {
+    contentfulOptions = {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
+    }
+} else {
+    contentfulOptions = {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
+        host: process.env.CONTENTFUL_PREVIEW_HOST,
+    }
+}
+
 module.exports = {
     siteMetadata: {
         title: "photogarropy",
@@ -33,27 +53,15 @@ module.exports = {
         {
             resolve: "gatsby-plugin-google-fonts",
             options: {
-                fonts: [
-                    "josefin slab",
-                    "sacramento",
-                ],
+                fonts: ["josefin slab", "sacramento"],
             },
         },
         {
             resolve: "gatsby-plugin-sass",
         },
         {
-            resolve: "gatsby-source-filesystem",
-            options: {
-                name: "content",
-                path: `${__dirname}/src/content/`,
-            },
-        },
-        {
-            resolve: "gatsby-transformer-remark",
-        },
-        {
-            resolve: "gatsby-transformer-json",
+            resolve: "gatsby-source-contentful",
+            options: contentfulOptions,
         },
     ],
 }
